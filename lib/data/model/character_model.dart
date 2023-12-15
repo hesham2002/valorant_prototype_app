@@ -1,10 +1,12 @@
+import 'package:valorant_prototype_app/data/model/role_model.dart';
 import 'package:valorant_prototype_app/data/model/voice_line.dart';
 
 import 'ability_model.dart';
 
 class CharacterModel {
-  late List<AbilityModel>abilities;
- late VoiceLineModel voiceLineModel;
+  List<AbilityModel> abilities;
+  VoiceLineModel voiceLineModel;
+  Role role;
   String uuid,
       displayName,
       description,
@@ -19,7 +21,10 @@ class CharacterModel {
       background;
 
   CharacterModel(
-      {required this.uuid,
+      {required this.role,
+      required this.abilities,
+      required this.voiceLineModel,
+      required this.uuid,
       required this.displayName,
       required this.description,
       required this.developerName,
